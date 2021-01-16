@@ -28,6 +28,9 @@
     stroke: #ddd;
     stroke-width: 0.5;
   }
+  .error {
+        color: red
+    }
   </style>
 </head>
 <body>
@@ -79,5 +82,39 @@
     <div id="app"></div>
   </div>
  <h2>Globo!</h2>
+ <p id="p1">First paragraph</p>
+<p id="p2">Second paragraph</p>
+
+<script>
+    d3.select("#p2").style("color", "green");
+</script>
+
+<table>
+  <tr>
+      <td>
+          One
+      </td>
+      <td>
+          Two
+      </td>
+  </tr>
+  <tr>
+      <td>
+          Three
+      </td>
+      <td>
+          Four
+      </td>
+  </tr>
+  </table>
+  
+  <script>
+      d3.select("tr").selectAll("td").style('background-color','yellow');
+  </script>
+
+<h3>Error: This is dummy error.</h3>
+<script>
+    d3.select("h3").attr("class","error");
+</script>
   </body>
 </html>
