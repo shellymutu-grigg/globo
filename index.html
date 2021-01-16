@@ -236,5 +236,30 @@ function update() {
         .attr("height",100)
 }
     </script>
+    <p id='p3'> D3 Tutorials</p>
+
+<script>
+        var myData = ["Hello World!"]; //Must pass an array const will result in not displaying
+     
+        var p = d3.select("body")
+            .selectAll("#p3")
+            .data(myData)
+            .text(function (d) {
+                return d;
+            });
+</script>
+<p class='p4'> </p>
+<p class='p4'> </p>
+<p class='p4'> </p>
+<script>
+    var myData = ["Hello World!", "Hello D3","Hello JavaScript"];
+     
+        var p = d3.select("body")
+                .selectAll(".p4")
+                .data(myData)
+                .text(function (d, i) {
+                    return d;
+                });
+</script>
   </body>
 </html>
