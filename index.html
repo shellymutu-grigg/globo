@@ -248,25 +248,40 @@ function update() {
                 return d;
             });
 </script>
-<p class='p4'> </p>
-<p class='p4'> </p>
-<p class='p4'> </p>
-<script>
-    var myData = ["Hello World!", "Hello D3","Hello JavaScript"];
+ <!-- <p class='p4'> </p>
+ <p class='p4'> </p>
+ <p class='p4'> </p>
+ <script> 
+//     var myData = ["Hello World!", "Hello D3","Hello JavaScript"];
      
-        var p = d3.select("body")
-                .selectAll(".p4")
-                .data(myData)
-                .text(function (d, i) {
-                    return d;
-                });
-                var data = [4, 1, 6, 2, 8, 9];
-    var body = d3.select("body")
-                .selectAll("span")
-                .data(data)
-                .enter()
-                .append("span")
-                .text(function(d) { return d + " "; });
+//         var p = d3.select("body")
+//                 .selectAll(".p4")
+//                 .data(myData)
+//                 .text(function (d, i) {
+//                     return d;
+//                 });
+//                 var data = [4, 1, 6, 2, 8, 9];
+//     var body = d3.select("body")
+//                 .selectAll("span")
+//                 .data(data)
+//                 .enter()
+//                 .append("span")
+//                 .text(function(d) { return d + " "; });
+// </script>  -->
+<script>
+  var data = [5, 2, 9, 6, 3, 4];
+  var body = d3.select("body")
+               .selectAll("span")
+               .data(data)
+               .enter().append("span")
+               .style('color', function(d) {
+                   if (d % 2 === 0) {
+                       return "green";
+                   } else {
+                       return "red";
+                   }
+               })
+               .text(function(d) { return d + " "; });
 </script>
   </body>
 </html>
