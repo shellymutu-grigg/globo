@@ -326,5 +326,17 @@ var p = d3.select("body")
             .exit()
             .remove();
 </script>
+<body>
+  <p>D3 Tutorials</p>
+  <script>
+
+  d3.select("body")
+      .select("p")
+      .datum(100)
+      .text(function (d, i) {
+          return d;
+      });
+  </script>
+</body>
   </body>
 </html>
