@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<!-- <html>
   <head>
     <script src="https://d3js.org/d3.v5.min.js"></script>
   </head> 
   <body>
+    <h2>Display values using scales API method </h2>
     <script>
       var infoset = [59.5, 17.2, 9.6, 7.6, 5.5, 0.5]
       var span = 500, ceil = 500;
@@ -30,4 +31,20 @@
       .attr("fill", "blue").attr("dy",".85em");
     </script>
   </body>
-</html>
+</html> -->
+
+<html>
+<head> 
+<title>Random Functions in d3</title>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+<h3>Random Functions in d3</h3>
+<script>
+document.write(d3.randomUniform(1, 2)() +"<p>");
+document.write(d3.randomNormal(1, 2)()+"<p>");
+document.write(d3.randomLogNormal(1, 2)()+"<p>");
+document.write(d3.randomBates(1, 2)()+"<p>");
+document.write(d3.randomIrwinHall(1, 2)()+"<p>");
+document.write(d3.randomExponential(1, 2)()+"<p>");
+</script></body></html>
