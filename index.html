@@ -337,15 +337,36 @@ var p = d3.select("body")
           return d;
       });
   </script>
-  <script>
-    d3.csv("/data/employee.csv", function(data) {
-    // d3.csv("https://127.0.0.1:8080/data/employee.csv", function(data) {
+  <!-- <script> -->
+    <!-- d3.csv("/data/employee.csv", function(data) { -->
+    <!-- // d3.csv("https://127.0.0.1:8080/data/employee.csv", function(data) {
     // d3.csv("https://localhost:8080", function(data) {
-        for (var i = 0; i < data?.length; i++) {
-            console.log(data[i].Name);
-            console.log(data[i].Age);
-        }
-    });
-    </script>
+    //     for (var i = 0; i < data?.length; i++) {
+    //         console.log(data[i].Name);
+    //         console.log(data[i].Age);
+    //     }
+    // });
+    // </script> -->
+    <svg width="500" height="500">
+      <line x1="100" y1="50" x2="500" y2="50" stroke="black"/>
+  </svg>
+  <script>
+    var width = 400;
+    var height = 400;
+
+    //Create SVG element
+    var svg = d3.select("body")
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+    //Create line element inside SVG
+    svg.append("line")
+       .attr("x1", 110)
+       .attr("x2", 500)
+       .attr("y1", 70)
+       .attr("y2", 70)
+       .attr("stroke", "blue")
+</script>
   </body>
 </html>
