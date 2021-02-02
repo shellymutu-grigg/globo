@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta charset="UTF-8">
 <!-- <html>
   <head>
     <script src="https://d3js.org/d3.v5.min.js"></script>
@@ -33,7 +34,7 @@
   </body>
 </html> -->
 
-<html>
+<!-- <html>
 <head> 
 <title>Random Functions in d3</title>
 <script src="https://d3js.org/d3.v5.min.js"></script>
@@ -47,4 +48,35 @@ document.write(d3.randomLogNormal(1, 2)()+"<p>");
 document.write(d3.randomBates(1, 2)()+"<p>");
 document.write(d3.randomIrwinHall(1, 2)()+"<p>");
 document.write(d3.randomExponential(1, 2)()+"<p>");
-</script></body></html>
+</script></body></html> -->
+
+<html>
+<head> 
+<script src="https://d3js.org/d3.v5.min.js"></script></head>
+<body>
+<h3>Interpolate Numbers, Colors and Dates</h3>
+<script>
+var inpolat = d3.interpolateNumber(99,100);
+
+document.write(inpolat(0.0) + "<p>");
+document.write(inpolat(0.2)+ "<p>");
+document.write(inpolat(0.5) + "<p>");
+document.write(inpolat(1.0)+ "<p>");
+
+var inpolcolrs = d3.interpolateRgb("yellow", "aquamarine");
+
+document.write(inpolcolrs(0.0)+ "<p>");
+document.write(inpolcolrs(0.2)+ "<p>");
+document.write(inpolcolrs(0.5)+ "<p>");
+document.write(inpolcolrs(0.8)+ "<p>");
+document.write(inpolcolrs(1.0)+ "<p>");
+
+var inpoldates = d3.interpolateDate(new Date("2020-01-01 00:00:00"), new Date("2020-01-15 23:59:59"));
+document.write(inpoldates(0.0)+ "<p>");
+document.write(inpoldates(0.2)+ "<p>");
+document.write(inpoldates(0.5)+ "<p>");
+document.write(inpoldates(0.8)+ "<p>");
+document.write(inpoldates(1.0)+ "<p>");
+</script>
+</body>
+</html>
