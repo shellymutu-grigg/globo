@@ -5,17 +5,21 @@
 <style type="text/css"> body {font-family: Arial, Helvetica, sans-serif; color: blue;}</style>
 </head>
 <body>
-<script>
-var datetimefmt = d3.timeFormat('%d-%m-%Y %H:%M:%S %p');
-document.write(datetimefmt(new Date()) +"<p>");
-var timePortion = d3.timeFormat('%H:%M:%S %p');
-document.write(timePortion(new Date()) +"<p>");
-var datePortion = d3.timeFormat("%B %d, %Y");
-document.write(datePortion(new Date())+"<p>");
-var datefmt = d3.timeFormat(" %d");
-document.write(datefmt(new Date())+"<p>");
-var dayfmt = d3.timeFormat("%A ");
-document.write(dayfmt(new Date())+"<p>");
-var monfmt = d3.timeFormat("%B");
-document.write(monfmt(new Date()) +"<p>");
-</script></body></html>
+  <script>
+      var color = d3.scaleOrdinal(['#4daf4a','#377eb8','#ff7f00','#984ea3','#e41a1c']);
+      console.log(color(0))
+      console.log(color(1))
+      console.log(color(2))
+      console.log(color(3))
+      console.log(color(4))
+      console.log(color(5))
+  </script>
+  <script>
+
+    var data = [2, 4, 8, 10];
+    var pie = d3.pie()
+    console.log(pie(data))
+
+</script>
+  </body>
+</html>
