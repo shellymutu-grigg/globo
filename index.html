@@ -1,117 +1,21 @@
 <!DOCTYPE html>
 <meta charset="UTF-8">
-<!-- <html>
-  <head>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-  </head> 
-  <body>
-    <h2>Display values using scales API method </h2>
-    <script>
-      var infoset = [59.5, 17.2, 9.6, 7.6, 5.5, 0.5]
-      var span = 500, ceil = 500;
-      var scalespan = d3.scaleLinear()
-      .domain([0, d3.max(infoset)])
-      .range([0, 400]);
-      var screen = d3.select("body").append("svg")
-      .attr("width", span)
-      .attr("height", ceil)
-      .append("g").attr("transform", "translate(5,20)");
-      var rule = screen.selectAll("rect")
-      .data(infoset).enter()
-      .append("rect")
-      .attr("width", function(d){ return scalespan(d);})
-      .attr("height", 20)
-      .attr("y", function(d, i){ return i*25; })
-      .attr("fill", "#b3ccff"); 
-      
-      screen.selectAll("text")
-      .data(infoset).enter().append("text")
-      .attr("y", function(d, i){ return i*25; })
-      .attr("x", function(d){ return scalespan(d);})
-      .text(function(d) {return d;})
-      .attr("fill", "blue").attr("dy",".85em");
-    </script>
-  </body>
-</html> -->
-
-<!-- <html>
-<head> 
-<title>Random Functions in d3</title>
-<script src="https://d3js.org/d3.v5.min.js"></script>
+<html>
+<head><script src="https://d3js.org/d3.v5.min.js"></script>
+<style type="text/css"> body {font-family: Arial, Helvetica, sans-serif; color: blue;}</style>
 </head>
 <body>
-<h3>Random Functions in d3</h3>
 <script>
-document.write(d3.randomUniform(1, 2)() +"<p>");
-document.write(d3.randomNormal(1, 2)()+"<p>");
-document.write(d3.randomLogNormal(1, 2)()+"<p>");
-document.write(d3.randomBates(1, 2)()+"<p>");
-document.write(d3.randomIrwinHall(1, 2)()+"<p>");
-document.write(d3.randomExponential(1, 2)()+"<p>");
-</script></body></html> -->
-
-<!-- <html>
-<head> 
-<script src="https://d3js.org/d3.v5.min.js"></script></head>
-<body>
-<h3>Interpolate Numbers, Colors and Dates</h3>
-<script>
-var inpolat = d3.interpolateNumber(99,100);
-
-document.write(inpolat(0.0) + "<p>");
-document.write(inpolat(0.2)+ "<p>");
-document.write(inpolat(0.5) + "<p>");
-document.write(inpolat(1.0)+ "<p>");
-
-var inpolcolrs = d3.interpolateRgb("yellow", "aquamarine");
-
-document.write(inpolcolrs(0.0)+ "<p>");
-document.write(inpolcolrs(0.2)+ "<p>");
-document.write(inpolcolrs(0.5)+ "<p>");
-document.write(inpolcolrs(0.8)+ "<p>");
-document.write(inpolcolrs(1.0)+ "<p>");
-
-var inpoldates = d3.interpolateDate(new Date("2020-01-01 00:00:00"), new Date("2020-01-15 23:59:59"));
-document.write(inpoldates(0.0)+ "<p>");
-document.write(inpoldates(0.2)+ "<p>");
-document.write(inpoldates(0.5)+ "<p>");
-document.write(inpoldates(0.8)+ "<p>");
-document.write(inpoldates(1.0)+ "<p>");
-</script>
-</body>
-</html> -->
-
-<html> 
-<head><title>Formatting for currency</title>
-<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<style type="text/css">
-body {padding: 50px; font: 16px Courier;}
-p { color:blue; font-size: 16px; font-weight: bold;}</style>
-</head>
-<body><script type="text/javascript">
-var body = d3.select("body");
-var comafmt = d3.format(","),
-decimalfmt = d3.format(".1f"), 
-comadecimalfmt = d3.format(",.2f"),
-suffixfmt = d3.format("s"),
-suffixfmtDecimal1 = d3.format(".1s"),
-suffixfmtDecimal2 = d3.format(".2s"),
-rupiemoneyfmt = function(d) { return "Rs " + comadecimalfmt(d); },
-intmoneyfmt = function(d) { return "$ " + comadecimalfmt(d); },
-euromoneyfmt= function(d) { return "€ " + comadecimalfmt(d); },
-percentfmt = d3.format(",.2%");
-
-var number = 27500;
-
-body.append("p").text("Number used for formatting is : " + number).style("font-weight", "bold");
-body.append("p").text(function() { return 'Indian Rupee format of above Number : ' + rupiemoneyfmt(number); });
-body.append("p").text(function() { return 'International Currency format will be : ' + intmoneyfmt(number); });
-body.append("p").text(function() { return 'Euro Currency format will be : ' + euromoneyfmt(number); });
-body.append("p").text(function() { return 'Percent format : ' + percentfmt(number); });
-body.append("p").text(function() { return 'Suffix for large number : ' + suffixfmt(number); });
-body.append("p").text(function() { return 'Round off ceil number: ' + suffixfmtDecimal1(number); });
-body.append("p").text(function() { return 'Round off floor number : ' + suffixfmtDecimal2(number); });
-body.append("p").text(function() { return 'Comma for large number: ' + comafmt(number); });
-body.append("p").text(function() { return 'One decimal format : ' + decimalfmt(number); });
-body.append("p").text(function() { return 'Two decimal format : ' + comadecimalfmt(number); });
+var datetimefmt = d3.timeFormat('%d-%m-%Y %H:%M:%S %p');
+document.write(datetimefmt(new Date()) +"<p>");
+var timePortion = d3.timeFormat('%H:%M:%S %p');
+document.write(timePortion(new Date()) +"<p>");
+var datePortion = d3.timeFormat("%B %d, %Y");
+document.write(datePortion(new Date())+"<p>");
+var datefmt = d3.timeFormat(" %d");
+document.write(datefmt(new Date())+"<p>");
+var dayfmt = d3.timeFormat("%A ");
+document.write(dayfmt(new Date())+"<p>");
+var monfmt = d3.timeFormat("%B");
+document.write(monfmt(new Date()) +"<p>");
 </script></body></html>
