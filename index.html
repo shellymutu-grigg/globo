@@ -50,7 +50,7 @@ document.write(d3.randomIrwinHall(1, 2)()+"<p>");
 document.write(d3.randomExponential(1, 2)()+"<p>");
 </script></body></html> -->
 
-<html>
+<!-- <html>
 <head> 
 <script src="https://d3js.org/d3.v5.min.js"></script></head>
 <body>
@@ -79,4 +79,39 @@ document.write(inpoldates(0.8)+ "<p>");
 document.write(inpoldates(1.0)+ "<p>");
 </script>
 </body>
-</html>
+</html> -->
+
+<html> 
+<head><title>Formatting for currency</title>
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<style type="text/css">
+body {padding: 50px; font: 16px Courier;}
+p { color:blue; font-size: 16px; font-weight: bold;}</style>
+</head>
+<body><script type="text/javascript">
+var body = d3.select("body");
+var comafmt = d3.format(","),
+decimalfmt = d3.format(".1f"), 
+comadecimalfmt = d3.format(",.2f"),
+suffixfmt = d3.format("s"),
+suffixfmtDecimal1 = d3.format(".1s"),
+suffixfmtDecimal2 = d3.format(".2s"),
+rupiemoneyfmt = function(d) { return "Rs " + comadecimalfmt(d); },
+intmoneyfmt = function(d) { return "$ " + comadecimalfmt(d); },
+euromoneyfmt= function(d) { return "€ " + comadecimalfmt(d); },
+percentfmt = d3.format(",.2%");
+
+var number = 27500;
+
+body.append("p").text("Number used for formatting is : " + number).style("font-weight", "bold");
+body.append("p").text(function() { return 'Indian Rupee format of above Number : ' + rupiemoneyfmt(number); });
+body.append("p").text(function() { return 'International Currency format will be : ' + intmoneyfmt(number); });
+body.append("p").text(function() { return 'Euro Currency format will be : ' + euromoneyfmt(number); });
+body.append("p").text(function() { return 'Percent format : ' + percentfmt(number); });
+body.append("p").text(function() { return 'Suffix for large number : ' + suffixfmt(number); });
+body.append("p").text(function() { return 'Round off ceil number: ' + suffixfmtDecimal1(number); });
+body.append("p").text(function() { return 'Round off floor number : ' + suffixfmtDecimal2(number); });
+body.append("p").text(function() { return 'Comma for large number: ' + comafmt(number); });
+body.append("p").text(function() { return 'One decimal format : ' + decimalfmt(number); });
+body.append("p").text(function() { return 'Two decimal format : ' + comadecimalfmt(number); });
+</script></body></html>
