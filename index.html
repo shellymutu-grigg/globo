@@ -5,23 +5,7 @@
 <style type="text/css"> body {font-family: Arial, Helvetica, sans-serif; color: blue;}</style>
 </head>
 <body>
-  <script>
-      var color = d3.scaleOrdinal(['#4daf4a','#377eb8','#ff7f00','#984ea3','#e41a1c']);
-      console.log(color(0))
-      console.log(color(1))
-      console.log(color(2))
-      console.log(color(3))
-      console.log(color(4))
-      console.log(color(5))
-  </script>
-  <script>
-
-    var data = [2, 4, 8, 10];
-    var pie = d3.pie()
-    console.log(pie(data))
-
-</script>
-<body>
+  <h1>D3.js Pie Chart </h1>
   <svg width="300" height="200"> </svg>
   <script>
       var data = [2, 4, 8, 10];
@@ -56,6 +40,5 @@
           })
           .attr("d", arc);
   </script>
-  </body>
   </body>
 </html>
