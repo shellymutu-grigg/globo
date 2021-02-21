@@ -13,7 +13,6 @@ const App = () => {
       </div>
       {/* This 'main' div is only for styling (so we can use flexbox) */}
       <div className='main'>
-        <Nav />
         <Route path='/info/:genre/:name' component={Description} />
         <Route path='/genre/:genre' component={AllArtists} />
         <Route exact path='/' component={Home} />
