@@ -1,0 +1,147 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Syne Mono', monospace;
+    
+}
+
+.main div {
+  margin: 0px 10px 0px 10px;
+}
+
+.background {
+    background-color: white;
+
+}
+.header_pic{
+    width: 60px;
+    height: 30px;
+}
+.genre_ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+.genre_li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+.genre_li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+.genre_li a:hover {
+    background-color: #555;
+    color: white;
+} 
+.artist_ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+
+.artist_li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+    /* Change the link color on hover */
+    .artist_li a:hover {
+        background-color: #555;W
+        color: white;
+    } 
+
+.home_header {
+    text-align: center;
+    background-color: whitesmoke;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 5px 5px rgba(58, 58, 58, 0.233);
+
+}
+
+.artistImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+
+
+}
+
+.img {
+  width: 425px;
+}
+
+.summary {
+    background-color:  #f1f1f1;
+}
+
+h1.home_header {
+  font-family: 'Syne Mono', monospace;
+}
+
+ul {
+  background-color: green;
+}
+@media only screen and (max-width: 320px) {
+    .background {
+      font-size: small;
+
+    }
+
+}   
+
+@media only screen and (max-width: 1024px) {
+    ul {
+      background-color: rgb(221, 244, 252);
+      color: rgb(3, 32, 70);
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+        ul {
+          font-family: 'Syne Mono', monospace;
+        }
+        p {
+            font-family: 'Syne Mono', monospace;
+            font-size: 30px;
+        }
+        .main {
+            flex-direction: column;
+        }
+      }
+@media only screen and (min-width: 1200px) {
+    .background {
+      font-size: large;
+    }
+    ul {
+        font-family: 'Syne Mono', monospace;
+      }
+      p {
+          font-family: 'Syne Mono', monospace;
+          font-size: 30px;
+      }
+
+}   
+
+  @media only screen and (max-width: 425px) {
+    .main {
+    flex-direction: column;
+    }
+  }
+  
+  .myButtons{
+    min-width: 100%;
+  }
