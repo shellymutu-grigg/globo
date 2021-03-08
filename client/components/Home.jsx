@@ -5,7 +5,7 @@ const Home = () => {
     <div>
       <h1 class='heading'>Rotating Globe with D3.js</h1>
       <h2 class='heading'>Based on code by Atanu Mallick</h2>
-      <h3 class='heading'>Continuing error with CORS - continuing with troubleshooting</h3>
+      <h3 class='heading'>Continuing error with CORS - troubleshooting continues</h3>
     </div>
   )
 }
