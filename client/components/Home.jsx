@@ -1,5 +1,7 @@
 import React from 'react'
 
+// Further diagnosis
+
 const Home = () => {
   return (
     <>
