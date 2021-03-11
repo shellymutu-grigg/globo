@@ -12,6 +12,7 @@ const Home = () => {
     </div>
     <svg></svg>
     <script></script>
+    console.log("diagnosis", diagnosis)
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://d3js.org/topojson.v1.min.js"></script>
     <script crossorigin="anonymous">
