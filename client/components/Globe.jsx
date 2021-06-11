@@ -4,7 +4,6 @@ export default class Globe extends React.Component {
   render () {
     return (
       <>
-        <Header />
         <div className='wraper-about'></div>
         <div className='box-about'>
           <div className='about-container'>
